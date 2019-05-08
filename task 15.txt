@@ -1,0 +1,6 @@
+Найдите размеры жестких дисков, совпадающих у двух и более PC. Вывести: HD
+
+SELECT maker, MAX(type) 
+FROM product 
+GROUP BY maker 
+HAVING COUNT(DISTINCT type) = 1 AND COUNT(model) > 1

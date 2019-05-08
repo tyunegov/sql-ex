@@ -1,0 +1,7 @@
+Найдите производителей самых дешевых цветных принтеров. Вывести: maker, price
+
+SELECT DISTINCT maker, price
+FROM printer
+INNER JOIN product
+ONprinter.model=product.model
+WHERE price = SELECT MIN(price) FROM printer WHERE printer.color='y') AND printer.color = 'y'
